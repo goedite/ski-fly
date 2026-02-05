@@ -98,8 +98,8 @@
 
                 <!-- Botón Menú Móvil -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-sarrio-deep hover:text-sarrio-signal"
-                        onclick="alert('El menú móvil se desplegaría aquí.')">
+                    <button type="button" class="text-sarrio-deep hover:text-sarrio-signal"
+                        onclick="alert('El menú móvil se desplegaría aquí.')" aria-label="Abrir menú de navegación">
                         <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
@@ -212,9 +212,9 @@
                             <span class="font-mono text-sarrio-main">85 CM</span>
                         </div>
                         <div class="mt-6 p-4 bg-sarrio-deep rounded-lg text-sarrio-ice font-mono text-xs">
-                            > ANALYZING SECTOR A-4...<br>
-                            > OPTIMIZATION REQUIRED<br>
-                            > WATER SAVING TARGET: 15%
+                            &gt; ANALYZING SECTOR A-4...<br>
+                            &gt; OPTIMIZATION REQUIRED<br>
+                            &gt; WATER SAVING TARGET: 15%
                         </div>
                     </div>
                 </div>
@@ -322,12 +322,12 @@
                     <textarea rows="4" placeholder="¿Cuál es tu principal desafío operativo?"
                         class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm"></textarea>
 
-                    <button type="button"
+                    <button type="submit"
                         class="w-full bg-sarrio-signal text-white font-bold text-lg py-4 rounded-lg hover:bg-orange-600 transition transform hover:-translate-y-1 shadow-lg shadow-orange-900/50">
                         Enviar Solicitud
                     </button>
                     <p class="text-center text-xs text-sarrio-granite mt-4 font-mono uppercase tracking-widest">
-                        Respuesta en < 24h</p>
+                        Respuesta en &lt; 24h</p>
                 </form>
             </div>
 
