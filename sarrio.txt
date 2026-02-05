@@ -1,0 +1,51 @@
+Contexto estratégico
+El Pirineo español tiene unas 40 estaciones (Baqueira, Formigal-Panticosa, Cerler, Candanchú, La Molina, Masella, Boí Taüll...) repartidas entre Aragón, Cataluña y Navarra. Es un mercado más fragmentado que el alpino, con estaciones de tamaño medio, presupuestos más ajustados y una necesidad creciente de eficiencia hídrica (sequías recurrentes). Eso es tu ventaja competitiva narrativa.
+1. Posicionamiento
+No vendas "drones". Vende inteligencia de nieve y montaña. El mensaje central debería girar en torno a:
+
+Ahorro de agua y energía en innivación artificial (tema hipersensible en España por la sequía)
+Seguridad operativa (evitar que personas trabajen de noche en alta montaña)
+Datos accionables, no solo fotos aéreas bonitas
+
+Un claim posible: "Cada copo cuenta" o "La montaña, vista desde donde importa".
+2. Naming
+Aquí tienes varias líneas creativas:
+Línea "terreno + tech":
+
+NivAero (nieve + aéreo)
+CrestaTech (cresta de montaña + tecnología)
+Pirenair (Pirineo + air)
+
+Línea "precisión/datos":
+
+Snowsight (visión de nieve, funciona en inglés internacional)
+NeuView (neu = nieve en catalán + view)
+
+Línea "autóctona con carácter":
+
+Sarrio (el rebeco pirenaico, animal ágil que domina la alta montaña — metáfora perfecta para un dron autónomo)
+Borda (las construcciones de piedra pirenaicas, evoca arraigo)
+
+Personalmente me inclinaría por algo como Sarrio Aerodata o simplemente Sarrio. Es memorable, tiene raíz pirenaica, es fácil de pronunciar en español, catalán y francés (mercado andorrano/francés potencial), y la imagen del rebeco sobrevolando cumbres da mucho juego visual.
+3. Identidad visual
+Paleta de colores:
+
+Azul profundo glaciar (#1B3A5C) como color principal — transmite tecnología, frío, profesionalidad
+Blanco nieve como base
+Un acento en naranja montaña (#E8732A) — visibilidad, energía, contraste con la nieve (como los jalones de pista)
+Gris granito como secundario
+
+Tipografía: Geométrica y limpia (tipo Inter, DM Sans o Outfit). Nada decorativo. Esto es B2B industrial, no turismo.
+Isotipo: Si usas Sarrio, una silueta estilizada de rebeco con líneas que sugieran trayectorias de vuelo o datos. Minimalista, que funcione en monocromático sobre un dron o un casco.
+4. Arquitectura de servicios
+Empaqueta la oferta como productos claros, no como "hacemos vuelos con drones":
+ServicioQué resuelveSnowWatchMonitorización de innivación en tiempo realPisteMapCartografía y modelos digitales de terrenoSafeCheckInspección de instalaciones (teleféricos, torres)SummerTrailServicio estival: bike parks, senderos, erosión
+5. Tono de comunicación
+B2B técnico pero cercano. Hablas con directores de estación, jefes de pistas y responsables de innivación. Son gente de montaña, práctica, que desconfía de lo "marketiniano". El tono debería ser directo, con datos concretos, sin florituras, y demostrando que entiendes sus problemas reales (turnos de noche, desperdicio de agua, ventanas meteorológicas estrechas).
+Evita el lenguaje startup tipo "disruptivo", "game-changer". Usa más bien: "menos agua perdida, más pista cubierta", "los datos que tu equipo de pistas necesita antes de las 6 de la mañana".
+6. Primeros pasos de marca
+
+Piloto gratuito con una estación referente (Formigal o Baqueira serían las mejores por volumen y visibilidad). El caso de éxito es tu mejor activo de venta.
+Presencia en ATUDEM (Asociación Turística de Estaciones de Montaña) y en ferias como Mountain Planet.
+Contenido técnico: vídeos cortos mostrando antes/después de innivación optimizada con datos reales, no vídeos "bonitos" de dron.
+Colaboración con AEMET o centros de predicción nival para posicionarte como referente en datos de montaña.
