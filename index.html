@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kioniq España | Drones Autónomos para Estaciones de Esquí</title>
+    <meta name="description" content="Socio oficial de Kioniq Austria en España. Inspección de pistas de esquí con drones autónomos 24/7.">
+    
+    <!-- 1. Carga de estilos (Tailwind CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Configuración de colores corporativos -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kioniq: {
+                            dark: '#0f172a', /* Azul noche */
+                            blue: '#0ea5e9', /* Azul cielo tecnológico */
+                            light: '#f8fafc', /* Blanco nieve */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. Iconos y Fuentes -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Efecto de imagen de fondo con superposición oscura */
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1518062541257-259468571897?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efecto Parallax */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="bg-kioniq-dark p-1.5 rounded text-white">
+                        <i data-lucide="mountain-snow" class="h-6 w-6"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">KIONIQ <span class="text-kioniq-blue font-light">ES</span></span>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicio" class="text-slate-600 hover:text-kioniq-blue font-medium transition">Servicio</a>
+                    <a href="#tecnologia" class="text-slate-600 hover:text-kioniq-blue font-medium transition">Tecnología</a>
+                    <a href="#ventajas" class="text-slate-600 hover:text-kioniq-blue font-medium transition">Ventajas</a>
+                    <a href="#contacto" class="bg-kioniq-dark text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Solicitar Demo
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-slate-900" onclick="alert('El menú móvil se desplegaría aquí.')">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN PORTADA (HERO) -->
+    <header class="hero-bg h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="absolute bottom-10 animate-bounce">
+            <i data-lucide="chevron-down" class="text-white h-10 w-10 opacity-70"></i>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-white z-10 pt-16">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 mb-8">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-sm font-medium tracking-wide">Tecnología operativa en Austria</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                Eficiencia Autónoma en<br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-200">Alta Montaña</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Transformamos la gestión de estaciones de esquí en España mediante inspecciones de drones autónomos monitoreadas 24/7.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                <a href="#contacto" class="w-full sm:w-auto bg-kioniq-blue text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-500 transition shadow-lg shadow-sky-900/40 border border-transparent">
+                    Contactar Partner España
+                </a>
+                <a href="#servicio" class="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-slate-900 transition">
+                    Descubrir Sistema
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 1: EL PROBLEMA/SOLUCIÓN -->
+    <section id="servicio" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-kioniq-blue font-semibold tracking-wide uppercase text-sm mb-2">Partner Oficial</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-6">Gestionar una estación de esquí es un desafío constante.</h3>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Las condiciones climáticas adversas y las vastas extensiones de terreno dificultan la inspección manual. Como socios de <strong>Kioniq Austria</strong>, traemos a España la solución definitiva.
+                    </p>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-kioniq-blue">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Sin esfuerzo extra</h4>
+                                <p class="text-slate-500">No necesitas entrenar a pilotos. Nosotros y el sistema autónomo nos encargamos de la operación.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-kioniq-blue">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Seguridad Certificada</h4>
+                                <p class="text-slate-500">Centro de control de pilotos activo 24/7 supervisando cada vuelo para cumplir normativa aérea.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen/Gráfico -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-kioniq-blue rounded-2xl transform rotate-3 opacity-10"></div>
+                    <img src="https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=800&auto=format&fit=crop" alt="Drone inspection" class="relative rounded-2xl shadow-2xl border border-slate-100 transform -rotate-1 hover:rotate-0 transition duration-500">
+                    
+                    <!-- Tarjeta flotante -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 max-w-xs hidden md:block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <span class="text-sm font-bold text-slate-700">Estado del Sistema</span>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-900">100% Operativo</div>
+                        <p class="text-xs text-slate-400 mt-1">Monitoreo remoto activo</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: CARACTERÍSTICAS (GRID) -->
+    <section id="tecnologia" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Datos claros para decisiones rápidas</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-16 text-lg">
+                Nuestros drones recogen datos críticos para el mantenimiento de pistas, avalanchas y seguridad técnica.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-blue-900/20">
+                        <i data-lucide="snowflake" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gestión de Nieve</h3>
+                    <p class="text-slate-500">Análisis preciso de la profundidad y calidad de la nieve para optimizar el pisado de pistas.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-indigo-900/20">
+                        <i data-lucide="tower-control" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Infraestructura</h3>
+                    <p class="text-slate-500">Inspección visual y térmica de pilonas, cables y sistemas de innivación artificial.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-slate-800 text-white rounded-xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-slate-900/20">
+                        <i data-lucide="file-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reportes Diarios</h3>
+                    <p class="text-slate-500">Recibe cada mañana un informe detallado en tu dashboard. Bases claras para decidir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO Y CTA FINAL -->
+    <section id="contacto" class="py-24 bg-kioniq-dark text-white relative">
+        <!-- Fondo decorativo -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Lleva tecnología austriaca a tu estación</h2>
+                    <p class="text-slate-300 text-lg">
+                        Estamos expandiendo la red de Kioniq en España. Rellena el formulario y agendaremos una demostración técnica.
+                    </p>
+                </div>
+
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nombre completo" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kioniq-blue focus:border-transparent transition">
+                        <input type="text" placeholder="Cargo / Puesto" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kioniq-blue focus:border-transparent transition">
+                    </div>
+                    <input type="email" placeholder="Correo electrónico corporativo" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kioniq-blue focus:border-transparent transition">
+                    <textarea rows="4" placeholder="¿Qué estación representas o cuál es tu interés?" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kioniq-blue focus:border-transparent transition"></textarea>
+                    
+                    <button type="button" class="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold text-lg py-4 rounded-lg hover:from-blue-500 hover:to-sky-400 transition transform hover:-translate-y-1 shadow-lg shadow-blue-900/50">
+                        Enviar Solicitud
+                    </button>
+                    <p class="text-center text-xs text-slate-500 mt-4">Tus datos están protegidos. Respuesta en menos de 24h.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2 text-white font-bold text-lg">
+                    <i data-lucide="mountain-snow" class="h-5 w-5"></i> KIONIQ ES
+                </div>
+                <p>Partner autorizado en España.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">Aviso Legal</a>
+                <a href="#" class="hover:text-white transition">Privacidad</a>
+                <a href="#" class="hover:text-white transition">Cookies</a>
+            </div>
+            <div class="text-slate-600">
+                &copy; 2023 Kioniq Partner Spain.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script inicializador de iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
