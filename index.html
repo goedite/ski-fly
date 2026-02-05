@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SARRIO | Aerodata Pirineos</title>
-    <meta name="description" content="Inteligencia aeroespacial de montaña. Monitorización de innivación, cartografía e inspección de infraestructuras en el Pirineo.">
-    
+    <meta name="description"
+        content="Inteligencia aeroespacial de montaña. Monitorización de innivación, cartografía e inspección de infraestructuras en el Pirineo.">
+
     <!-- 1. Carga de estilos (Tailwind CSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- 2. Configuración de colores corporativos -->
     <script>
         tailwind.config = {
@@ -36,51 +38,68 @@
 
     <!-- 3. Iconos y Fuentes -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <style>
-        body { font-family: 'Instrument Sans', sans-serif; }
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
         /* Efecto de imagen de fondo con superposición oscura */
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(15, 36, 64, 0.7), rgba(15, 36, 64, 0.4)), url('sarrio_hero_drone_pyrenees.png');
+            /* Fallback Unsplash image due to generation capacity issues */
+            background-image: linear-gradient(to bottom, rgba(15, 36, 64, 0.7), rgba(15, 36, 64, 0.4)), url('https://images.unsplash.com/photo-1483921020237-60f29bfbf282?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Efecto Parallax */
+            background-attachment: fixed;
+            /* Efecto Parallax */
         }
     </style>
 </head>
+
 <body class="bg-sarrio-snow text-sarrio-deep antialiased">
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm transition-all duration-300"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <div class="h-12 w-12 text-sarrio-signal">
                         <svg viewBox="0 0 120 120" fill="none" class="w-full h-full">
-                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
-                            <circle cx="60" cy="32" r="8" fill="currentColor"/>
+                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor"
+                                stroke-width="6" fill="none" stroke-linecap="round" />
+                            <circle cx="60" cy="32" r="8" fill="currentColor" />
                         </svg>
                     </div>
                     <div>
-                         <span class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
-                         <span class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata · Pirineos</span>
+                        <span
+                            class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
+                        <span
+                            class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata
+                            · Pirineos</span>
                     </div>
                 </div>
-                
+
                 <!-- Menú Desktop -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#proposito" class="text-sarrio-granite hover:text-sarrio-main font-medium transition text-sm tracking-wide uppercase">Propósito</a>
-                    <a href="#servicios" class="text-sarrio-granite hover:text-sarrio-main font-medium transition text-sm tracking-wide uppercase">Servicios</a>
-                    <a href="#contacto" class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 tracking-wide">
+                    <a href="#proposito"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium transition text-sm tracking-wide uppercase">Propósito</a>
+                    <a href="#servicios"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium transition text-sm tracking-wide uppercase">Servicios</a>
+                    <a href="#contacto"
+                        class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 tracking-wide">
                         Solicitar Demo
                     </a>
                 </div>
 
                 <!-- Botón Menú Móvil -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-sarrio-deep hover:text-sarrio-signal" onclick="alert('El menú móvil se desplegaría aquí.')">
+                    <button class="text-sarrio-deep hover:text-sarrio-signal"
+                        onclick="alert('El menú móvil se desplegaría aquí.')">
                         <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
@@ -93,26 +112,30 @@
         <div class="absolute bottom-10 animate-bounce">
             <i data-lucide="chevron-down" class="text-white h-10 w-10 opacity-70"></i>
         </div>
-        
+
         <div class="max-w-5xl mx-auto text-white z-10 pt-16">
-            <div class="inline-flex items-center gap-2 bg-sarrio-deep/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 mb-8">
+            <div
+                class="inline-flex items-center gap-2 bg-sarrio-deep/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 mb-8">
                 <span class="w-2 h-2 rounded-full bg-sarrio-signal animate-pulse"></span>
                 <span class="text-xs font-mono uppercase tracking-widest text-sarrio-ice">Inteligencia de Nieve</span>
             </div>
-            
+
             <h1 class="font-serif italic text-6xl md:text-8xl mb-6 leading-tight">
                 Cada copo <span class="text-sarrio-signal not-italic font-sans font-bold">cuenta</span>
             </h1>
-            
+
             <p class="text-xl md:text-2xl text-sarrio-ice mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                La montaña, vista desde donde importa. Ahorro de agua, seguridad operativa y datos accionables para el Pirineo.
+                La montaña, vista desde donde importa. Ahorro de agua, seguridad operativa y datos accionables para el
+                Pirineo.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                <a href="#contacto" class="w-full sm:w-auto bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40 border border-transparent">
+                <a href="#contacto"
+                    class="w-full sm:w-auto bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40 border border-transparent">
                     Contactar
                 </a>
-                <a href="#proposito" class="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-sarrio-deep transition">
+                <a href="#proposito"
+                    class="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-sarrio-deep transition">
                     Ver Soluciones
                 </a>
             </div>
@@ -122,24 +145,29 @@
     <!-- SECCIÓN 1: POSICIONAMIENTO -->
     <section id="proposito" class="py-24 bg-white relative overflow-hidden">
         <!-- Topography lines decor -->
-        <svg class="absolute top-0 left-0 w-full h-48 opacity-[0.03] pointer-events-none" viewBox="0 0 1200 200" preserveAspectRatio="none">
-             <path d="M0 180 Q300 120 600 150 Q900 180 1200 130" stroke="#0F2440" stroke-width="2" fill="none"/>
+        <svg class="absolute top-0 left-0 w-full h-48 opacity-[0.03] pointer-events-none" viewBox="0 0 1200 200"
+            preserveAspectRatio="none">
+            <path d="M0 180 Q300 120 600 150 Q900 180 1200 130" stroke="#0F2440" stroke-width="2" fill="none" />
         </svg>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
+
                 <!-- Texto -->
                 <div>
-                    <h2 class="text-sarrio-signal font-mono uppercase tracking-widest text-xs mb-4">Contexto Estratégico</h2>
-                    <h3 class="text-4xl font-bold text-sarrio-deep mb-8 font-serif italic">El Pirineo exige eficiencia.</h3>
+                    <h2 class="text-sarrio-signal font-mono uppercase tracking-widest text-xs mb-4">Contexto Estratégico
+                    </h2>
+                    <h3 class="text-4xl font-bold text-sarrio-deep mb-8 font-serif italic">El Pirineo exige eficiencia.
+                    </h3>
                     <p class="text-lg text-sarrio-granite mb-6 leading-relaxed">
-                        Frente a sequías recurrentes y costes energéticos, no vendemos "drones". Vendemos <strong>inteligencia de nieve</strong>.
+                        Frente a sequías recurrentes y costes energéticos, no vendemos "drones". Vendemos
+                        <strong>inteligencia de nieve</strong>.
                     </p>
                     <p class="text-lg text-sarrio-granite mb-8 leading-relaxed">
-                        Nuestro sistema permite una gestión quirúrgica de la innivación artificial. Menos agua perdida, más pista cubierta. Datos reales para decisiones críticas antes del amanecer.
+                        Nuestro sistema permite una gestión quirúrgica de la innivación artificial. Menos agua perdida,
+                        más pista cubierta. Datos reales para decisiones críticas antes del amanecer.
                     </p>
-                    
+
                     <div class="space-y-6 mt-8">
                         <div class="flex gap-4 items-start">
                             <div class="flex-shrink-0 mt-1">
@@ -147,7 +175,8 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-sarrio-deep text-lg">Eficiencia Hídrica</h4>
-                                <p class="text-sarrio-granite text-sm">Optimización crítica del recurso más valioso de la estación.</p>
+                                <p class="text-sarrio-granite text-sm">Optimización crítica del recurso más valioso de
+                                    la estación.</p>
                             </div>
                         </div>
                         <div class="flex gap-4 items-start">
@@ -156,7 +185,8 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-sarrio-deep text-lg">Seguridad Operativa</h4>
-                                <p class="text-sarrio-granite text-sm">Evita riesgos nocturnos para el personal. El Sarrio vuela solo.</p>
+                                <p class="text-sarrio-granite text-sm">Evita riesgos nocturnos para el personal. El
+                                    Sarrio vuela solo.</p>
                             </div>
                         </div>
                     </div>
@@ -164,7 +194,8 @@
 
                 <!-- Bloque Visual Tecnico -->
                 <div class="relative bg-sarrio-snow border border-sarrio-ice rounded-2xl p-8 shadow-lg">
-                    <div class="font-mono text-xs text-sarrio-granite tracking-widest mb-4 border-b border-sarrio-ice pb-2">
+                    <div
+                        class="font-mono text-xs text-sarrio-granite tracking-widest mb-4 border-b border-sarrio-ice pb-2">
                         SARRIO.SYS · LIVE TELEMETRY
                     </div>
                     <div class="space-y-4">
@@ -197,49 +228,67 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-sarrio-signal font-mono uppercase tracking-widest text-xs mb-3">Nuestra Oferta</h2>
-                <h3 class="text-4xl md:text-5xl font-bold text-sarrio-deep font-serif italic mb-6">Arquitectura de Servicios</h3>
-                <p class="text-sarrio-granite max-w-2xl mx-auto">Soluciones empaquetadas para necesidades específicas de la montaña.</p>
+                <h3 class="text-4xl md:text-5xl font-bold text-sarrio-deep font-serif italic mb-6">Arquitectura de
+                    Servicios</h3>
+                <p class="text-sarrio-granite max-w-2xl mx-auto">Soluciones empaquetadas para necesidades específicas de
+                    la montaña.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-sarrio-deep text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-sarrio-deep text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="snowflake" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-sarrio-deep">SnowWatch</h3>
                     <p class="text-sm text-sarrio-granite mb-4">Monitorización de innivación en tiempo real.</p>
-                    <div class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500"></div>
+                    <div
+                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-sarrio-main text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-sarrio-main text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="map" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-sarrio-deep">PisteMap</h3>
                     <p class="text-sm text-sarrio-granite mb-4">Cartografía y modelos digitales de terreno (DTM).</p>
-                    <div class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500"></div>
+                    <div
+                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                    </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-sarrio-granite text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-slate-900/20 group-hover:bg-sarrio-signal transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-sarrio-granite text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-slate-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="activity" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-sarrio-deep">SafeCheck</h3>
                     <p class="text-sm text-sarrio-granite mb-4">Inspección técnica de remontes y estructuras.</p>
-                    <div class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500"></div>
+                    <div
+                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                    </div>
                 </div>
-                
-                 <!-- Card 4 -->
-                <div class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-emerald-700 text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-green-900/20 group-hover:bg-sarrio-signal transition-colors">
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-emerald-700 text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-green-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="mountain" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-sarrio-deep">SummerTrail</h3>
                     <p class="text-sm text-sarrio-granite mb-4">Servicio estival: bike parks, senderos y erosión.</p>
-                    <div class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500"></div>
+                    <div
+                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,9 +296,11 @@
 
     <!-- SECCIÓN CONTACTO -->
     <section id="contacto" class="py-24 bg-sarrio-deep text-white relative overflow-hidden">
-         <!-- Aurora effect mimic -->
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sarrio-signal opacity-10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
-        
+        <!-- Aurora effect mimic -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-sarrio-signal opacity-10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2">
+        </div>
+
         <div class="max-w-4xl mx-auto px-4 relative z-10">
             <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
                 <div class="text-center mb-10">
@@ -261,31 +312,38 @@
 
                 <form class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Nombre completo" class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
-                        <input type="text" placeholder="Cargo / Estación" class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
+                        <input type="text" placeholder="Nombre completo"
+                            class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
+                        <input type="text" placeholder="Cargo / Estación"
+                            class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
                     </div>
-                    <input type="email" placeholder="Correo electrónico" class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
-                    <textarea rows="4" placeholder="¿Cuál es tu principal desafío operativo?" class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm"></textarea>
-                    
-                    <button type="button" class="w-full bg-sarrio-signal text-white font-bold text-lg py-4 rounded-lg hover:bg-orange-600 transition transform hover:-translate-y-1 shadow-lg shadow-orange-900/50">
+                    <input type="email" placeholder="Correo electrónico"
+                        class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm">
+                    <textarea rows="4" placeholder="¿Cuál es tu principal desafío operativo?"
+                        class="w-full bg-sarrio-main/50 border border-sarrio-main rounded-lg px-4 py-3 text-white placeholder-sarrio-granite focus:outline-none focus:ring-1 focus:ring-sarrio-signal transition font-mono text-sm"></textarea>
+
+                    <button type="button"
+                        class="w-full bg-sarrio-signal text-white font-bold text-lg py-4 rounded-lg hover:bg-orange-600 transition transform hover:-translate-y-1 shadow-lg shadow-orange-900/50">
                         Enviar Solicitud
                     </button>
-                    <p class="text-center text-xs text-sarrio-granite mt-4 font-mono uppercase tracking-widest">Respuesta en < 24h</p>
+                    <p class="text-center text-xs text-sarrio-granite mt-4 font-mono uppercase tracking-widest">
+                        Respuesta en < 24h</p>
                 </form>
             </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left text-sarrio-ice opacity-60 text-sm font-mono">
+
+            <div
+                class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left text-sarrio-ice opacity-60 text-sm font-mono">
                 <div>
-                   <strong class="block text-white mb-1 uppercase tracking-wider">Comercial</strong>
-                   hola@sarrio.tech
+                    <strong class="block text-white mb-1 uppercase tracking-wider">Comercial</strong>
+                    hola@sarrio.tech
                 </div>
                 <div>
-                   <strong class="block text-white mb-1 uppercase tracking-wider">Operaciones</strong>
-                   ops@sarrio.tech
+                    <strong class="block text-white mb-1 uppercase tracking-wider">Operaciones</strong>
+                    ops@sarrio.tech
                 </div>
                 <div>
-                   <strong class="block text-white mb-1 uppercase tracking-wider">Base</strong>
-                   Pirineos, España
+                    <strong class="block text-white mb-1 uppercase tracking-wider">Base</strong>
+                    Pirineos, España
                 </div>
             </div>
         </div>
@@ -295,7 +353,8 @@
     <footer class="bg-[#0b1a2e] text-sarrio-granite py-12 border-t border-white/5 text-sm">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <div class="flex items-center justify-center md:justify-start gap-2 mb-2 text-white font-bold text-lg select-none">
+                <div
+                    class="flex items-center justify-center md:justify-start gap-2 mb-2 text-white font-bold text-lg select-none">
                     SARRIO
                 </div>
                 <p class="font-mono text-xs uppercase tracking-widest">Aerodata S.L. &copy; 2024</p>
@@ -312,4 +371,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
