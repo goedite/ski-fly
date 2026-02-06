@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowWatch: control de innivación y cañones con dron | Parte diario</title>
+    <meta name="description"
+        content="Detecta deriva por viento en cañones, genera alertas y parte diario antes de apertura. Operación nocturna sin interferir con esquiadores.">
+
+    <!-- Canonical & OpenGraph -->
+    <link rel="canonical" href="https://sarrio.ski/snowwatch-control-innivacion-cannones.html" />
+    <meta property="og:title" content="SnowWatch: control de innivación y cañones con dron">
+    <meta property="og:description"
+        content="Detecta deriva por viento, ahorra agua y asegura pistas antes de la apertura.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sarrio.ski/snowwatch-control-innivacion-cannones.html">
+    <meta property="og:image" content="https://sarrio.ski/snowwatch.jpg">
+    <link rel="icon" type="image/jpeg" href="urogallo favicon.jpeg">
+
+    <!-- Estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sarrio: {
+                            deep: '#0F2440',
+                            main: '#1B3A5C',
+                            signal: '#E8732A',
+                            granite: '#6B7B8D',
+                            ice: '#D1E3F0',
+                            snow: '#F7F8FA',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Instrument Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-sarrio-snow text-sarrio-deep antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="h-12 w-12 text-sarrio-signal">
+                        <svg viewBox="0 0 120 120" fill="none" class="w-full h-full">
+                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor"
+                                stroke-width="6" fill="none" stroke-linecap="round" />
+                            <circle cx="60" cy="32" r="8" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span
+                            class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
+                        <span
+                            class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata
+                            · Pirineos</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#servicios"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium uppercase text-sm tracking-wide">Servicios</a>
+                    <a href="index.html#contacto"
+                        class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition tracking-wide">Solicitar
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="snowwatch.jpg" alt="SnowWatch Drone" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-white mt-16">
+            <span
+                class="inline-block px-3 py-1 mb-4 border border-sarrio-signal text-sarrio-signal rounded-full text-xs font-bold uppercase tracking-widest bg-sarrio-deep/80 backdrop-blur">
+                Eficiencia Hídrica
+            </span>
+            <h1 class="font-serif italic text-5xl md:text-7xl mb-6 leading-tight">
+                SnowWatch: Control de <span class="text-sarrio-signal not-italic font-sans font-bold">innivación</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-sarrio-ice font-light max-w-2xl mx-auto">
+                Monitorización 24/7 de cañones y deriva por viento. Ahorra agua y energía cada noche.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
+
+        <!-- Qué resuelve -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">¿Qué resuelve?</h2>
+            <div class="prose prose-lg text-sarrio-granite">
+                <p>
+                    La <strong>innivación artificial</strong> es el coste operativo más crítico de una estación. El
+                    viento nocturno a menudo desvía el chorro de los <strong>cañones de nieve</strong> fuera de la
+                    pista, desperdiciando miles de litros de agua y megavatios de energía. Sin supervisión visual
+                    constante, estas pérdidas pasan desapercibidas hasta la mañana siguiente, cuando ya es tarde y
+                    aparecen calvas o zonas de hielo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Cómo funciona</h2>
+                <div class="prose prose-lg text-sarrio-granite">
+                    <p>
+                        SnowWatch utiliza drones autónomos equipados con cámaras térmicas que realizan rondas
+                        programadas. El sistema detecta la <strong>deriva por viento</strong> del chorro de nieve en
+                        tiempo real. Si el cañón no está innivando la pista, se alerta inmediatamente al centro de
+                        control para apagarlo o reorientarlo. Además, generamos un <strong>parte diario</strong> de
+                        producción antes del amanecer.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-sarrio-ice/20 p-6 rounded-xl border border-sarrio-ice">
+                <ul class="space-y-4 font-mono text-sm text-sarrio-deep">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="wind" class="text-sarrio-signal"></i>
+                        Detección de deriva > 3m
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="thermometer" class="text-sarrio-signal"></i>
+                        Eficiencia térmica del cañón
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="clock" class="text-sarrio-signal"></i>
+                        Rondas cada 45 minutos
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entregables -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Entregables para el Director</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Alertas en Tiempo Real</h3>
+                    <p class="text-sm text-sarrio-granite">Notificaciones inmediatas si la eficiencia de producción cae
+                        por debajo del umbral.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Parte Diario Visual</h3>
+                    <p class="text-sm text-sarrio-granite">Informe matutino con ortofoto térmica de la producción de la
+                        noche.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Auditoría de Agua</h3>
+                    <p class="text-sm text-sarrio-granite">Cálculo de m³ de nieve producida vs. agua consumida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de uso -->
+        <section class="bg-sarrio-deep text-white p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 font-serif italic">Casos de Uso Críticos</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-sarrio-ice">
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Noches de viento racheado impredecible.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Inicio de temporada con temperaturas marginales.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Detección de fugas en la red de agua enterrada.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Comprobación de seguridad previa al pisado.
+                </li>
+            </ul>
+        </section>
+
+        <!-- FAQ JSON-LD Schema generated automatically below -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-8 font-serif">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué recibe el director de pistas cada mañana?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Recibe un informe ejecutivo en su móvil antes de la reunión de las 8:00 AM. Incluye un mapa de
+                        calor de la nieve producida, alertas de zonas donde el viento ha desplazado la nieve, y una
+                        confirmación visual del estado de las pistas principales para planificar la apertura.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cómo detectáis deriva por viento en cañones de nieve?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Nuestros drones utilizan cámaras térmicas de alta sensibilidad. El chorro de nieve sale a una
+                        temperatura diferente al aire circundante. Si el patrón térmico muestra que la nieve está
+                        cayendo fuera de los límites de la pista, el sistema lo identifica como anomalía y notifica la
+                        corrección necesaria.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Se puede operar de noche sin interferir con esquiadores?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Absolutamente. De hecho, operamos principalmente de noche, cuando la estación está cerrada
+                        (ventana de 17:30 a 08:30). Los drones vuelan de forma autónoma a una altura segura, equipados
+                        con sistemas anticolisión y luces de posicionamiento, sin riesgo para el personal de pisado ni
+                        esquiadores ocasionales.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cómo ayuda a decidir pisado y movimiento de nieve?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Al identificar dónde se ha acumulado realmente la nieve producida, los maquinistas pueden ir
+                        directamente a esas zonas a "repartir" la nieve, evitando pasadas inútiles sobre zonas peladas.
+                        Esto optimiza las horas de máquina y el consumo de gasoil.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué pasa con viento fuerte o una gran nevada?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        El DJI Dock 3 es una estación meteorológica en sí misma. Si las condiciones superan los límites
+                        operativos del dron (vientos > 12m/s o visibilidad nula), el sistema pausa la misión
+                        automáticamente y la reanuda cuando es seguro, protegiendo el equipo sin intervención humana.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center pt-8">
+            <a href="index.html#contacto"
+                class="inline-block bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40">
+                Solicitar Auditoría de Innivación
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-sarrio-deep text-sarrio-granite py-12 text-sm border-t border-white/10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between">
+            <div class="font-mono uppercase tracking-widest">Sarrio Aerodata &copy; 2024</div>
+            <a href="index.html" class="hover:text-white transition">Volver al Inicio</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Qué recibe el director de pistas cada mañana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recibe un informe ejecutivo en su móvil antes de la reunión de las 8:00 AM. Incluye un mapa de calor de la nieve producida, alertas de zonas donde el viento ha desplazado la nieve, y una confirmación visual del estado de las pistas principales."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cómo detectáis deriva por viento en cañones de nieve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestros drones utilizan cámaras térmicas de alta sensibilidad. El chorro de nieve sale a una temperatura diferente al aire circundante. Si el patrón térmico muestra que la nieve está cayendo fuera de los límites de la pista, el sistema lo identifica como anomalía."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Se puede operar de noche sin interferir con esquiadores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutamente. Operamos principalmente de noche, cuando la estación está cerrada. Los drones vuelan de forma autónoma a una altura segura, equipados con sistemas anticolisión y luces de posicionamiento."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cómo ayuda a decidir pisado y movimiento de nieve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Al identificar dónde se ha acumulado realmente la nieve producida, los maquinistas pueden ir directamente a esas zonas a 'repartir' la nieve, evitando pasadas inútiles sobre zonas peladas."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Qué pasa con viento fuerte o una gran nevada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El DJI Dock 3 es una estación meteorológica en sí misma. Si las condiciones superan los límites operativos del dron, el sistema pausa la misión automáticamente y la reanuda cuando es seguro."
+        }
+      }]
+    }
+    </script>
+</body>
+
+</html>

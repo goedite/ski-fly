@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PisteMap LiDAR: mapa de espesores y volumetría de nieve por pista</title>
+    <meta name="description"
+        content="Mapa LiDAR de espesores y volúmenes de nieve por pista. Optimiza movimiento de nieve y pisado para alargar temporada y reducir costes.">
+
+    <!-- Canonical & OpenGraph -->
+    <link rel="canonical" href="https://sarrio.ski/pistemap-lidar-espesor-volumen-nieve.html" />
+    <meta property="og:title" content="PisteMap LiDAR: mapa de espesores y volumetría de nieve">
+    <meta property="og:description"
+        content="Gestión precisa del volumen de nieve para maquinistas. Ahorra gasoil y alarga la temporada.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sarrio.ski/pistemap-lidar-espesor-volumen-nieve.html">
+    <meta property="og:image" content="https://sarrio.ski/pistemap.jpg">
+    <link rel="icon" type="image/jpeg" href="urogallo favicon.jpeg">
+
+    <!-- Estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sarrio: {
+                            deep: '#0F2440',
+                            main: '#1B3A5C',
+                            signal: '#E8732A',
+                            granite: '#6B7B8D',
+                            ice: '#D1E3F0',
+                            snow: '#F7F8FA',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Instrument Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-sarrio-snow text-sarrio-deep antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="h-12 w-12 text-sarrio-signal">
+                        <svg viewBox="0 0 120 120" fill="none" class="w-full h-full">
+                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor"
+                                stroke-width="6" fill="none" stroke-linecap="round" />
+                            <circle cx="60" cy="32" r="8" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span
+                            class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
+                        <span
+                            class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata
+                            · Pirineos</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#servicios"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium uppercase text-sm tracking-wide">Servicios</a>
+                    <a href="index.html#contacto"
+                        class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition tracking-wide">Solicitar
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="pistemap.jpg" alt="LiDAR Snow Map" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-white mt-16">
+            <span
+                class="inline-block px-3 py-1 mb-4 border border-sarrio-signal text-sarrio-signal rounded-full text-xs font-bold uppercase tracking-widest bg-sarrio-deep/80 backdrop-blur">
+                Gestión Volumétrica
+            </span>
+            <h1 class="font-serif italic text-5xl md:text-7xl mb-6 leading-tight">
+                PisteMap: Cartografía <span class="text-sarrio-signal not-italic font-sans font-bold">LiDAR</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-sarrio-ice font-light max-w-2xl mx-auto">
+                Mapa de espesores de nieve y volumetría para optimizar el pisado y alargar la temporada.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
+
+        <!-- Qué resuelve -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">¿Qué resuelve?</h2>
+            <div class="prose prose-lg text-sarrio-granite">
+                <p>
+                    El maquinista trabaja a ciegas muchas veces. No sabe con certeza si debajo de las orugas tiene 1
+                    metro de nieve o apenas 20 centímetros. Mover nieve "por intuición" desde zonas donde abunda a zonas
+                    donde escasea (calvas) conlleva un alto riesgo de dañar el terreno o la máquina, además de un gasto
+                    ineficiente de <strong>gasoil</strong> y horas de máquina. PisteMap elimina las suposiciones con
+                    datos duros.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Cómo funciona</h2>
+                <div class="prose prose-lg text-sarrio-granite">
+                    <p>
+                        Utilizamos drones industriales <strong>Matrice 350 RTK</strong> equipados con sensores
+                        <strong>Zenmuse L2 (LiDAR)</strong> que penetran la neblina ligera y operan de noche. Escaneamos
+                        las pistas y cruzamos estos datos con el Modelo Digital del Terreno (MDT) de verano. Esta
+                        diferencia de altura nos da el espesor exacto de nieve en cada metro cuadrado de la estación.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-sarrio-ice/20 p-6 rounded-xl border border-sarrio-ice">
+                <ul class="space-y-4 font-mono text-sm text-sarrio-deep">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="scan" class="text-sarrio-signal"></i>
+                        Precisión vertical ±5cm
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="layers" class="text-sarrio-signal"></i>
+                        Mala de colores configurable
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="file-check" class="text-sarrio-signal"></i>
+                        Compatible Leica / Trimble
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entregables -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Entregables para Montaña</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Mapa de Espesores</h3>
+                    <p class="text-sm text-sarrio-granite">Visualización semafórica: Rojo (escaso), Verde (óptimo), Azul
+                        (acumulación).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Cálculo Volumétrico</h3>
+                    <p class="text-sm text-sarrio-granite">Informe de m³ de nieve disponibles por pista y sector.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Guía de Pisado</h3>
+                    <p class="text-sm text-sarrio-granite">Instrucciones precisas de dónde "cosechar" nieve y dónde
+                        depositarla.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de uso -->
+        <section class="bg-sarrio-deep text-white p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 font-serif italic">Momentos Clave</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-sarrio-ice">
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Planificación estratégica del pisado tras nevada.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Gestión crítica de nieve en final de temporada.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Identificación de "neveros" artificiales por viento.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Preparación de pistas de competición.
+                </li>
+            </ul>
+        </section>
+
+        <!-- FAQ JSON-LD -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-8 font-serif">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué precisión aporta el LiDAR para espesores y volúmenes?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Nuestro sistema LiDAR Zenmuse L2 ofrece una precisión vertical de ±5 cm. Esto es radicalmente
+                        más preciso que la fotogrametría tradicional en nieve, donde la falta de contraste visual suele
+                        generar errores de metros.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cómo ayuda directamente al maquinista?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Le damos 'visión de rayos X'. El maquinista sabe exactamente dónde puede meter la pala a fondo
+                        para coger nieve y dónde debe pasar flotando para no sacar tierra. Esto reduce el número de
+                        pasadas y el desgaste de la máquina.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cómo se integra con el sistema de la máquina?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Exportamos los datos en formatos estándar (DXF, LandXML) compatibles con los sistemas de gestión
+                        de flotas y guiado GPS más comunes en pisapistas modernos, como Leica o Trimble.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Con qué frecuencia se realizan los vuelos?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Recomendamos un vuelo completo tras cada nevada significativa (>20cm) o semanalmente durante la
+                        primavera para gestionar el deshielo. También es útil antes de fechas críticas como Navidades o
+                        vacaciones escolares.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cómo ayuda a decidir el movimiento de nieve?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Identificamos acumulaciones por viento fuera de pista que son reservas estratégicas. El mapa
+                        indica la ruta más corta para empujar esa nieve hacia la pista, optimizando el tiempo de
+                        trabajo.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center pt-8">
+            <a href="index.html#contacto"
+                class="inline-block bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40">
+                Solicitar Mapa Volumétrico
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-sarrio-deep text-sarrio-granite py-12 text-sm border-t border-white/10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between">
+            <div class="font-mono uppercase tracking-widest">Sarrio Aerodata &copy; 2024</div>
+            <a href="index.html" class="hover:text-white transition">Volver al Inicio</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Qué precisión aporta el LiDAR para espesores y volúmenes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestro sistema LiDAR Zenmuse L2 ofrece una precisión vertical de ±5 cm, superando a la fotogrametría tradicional en nieve."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cómo ayuda directamente al maquinista?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le permite saber el espesor exacto bajo la máquina, optimizando el movimiento de nieve y evitando sacar tierra."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cómo se integra con el sistema de la máquina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exportamos archivos compatibles con sistemas Leica y Trimble de pisapistas."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Con qué frecuencia se realizan los vuelos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomendamos vuelos tras grandes nevadas o semanalmente en primavera."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cómo ayuda a decidir el movimiento de nieve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Identifica reservas de nieve acumulada por el viento para moverla eficientemente a la pista."
+        }
+      }]
+    }
+    </script>
+</body>
+
+</html>

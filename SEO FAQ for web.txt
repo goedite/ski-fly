@@ -1,0 +1,139 @@
+# SEO Implementation Ticket – SkiFly (Pirineos / Directores de Pistas)
+
+## Goal
+Improve organic SEO for queries related to **Pirineos**, **estaciones de esquí**, **innivación/cañones**, **parte diario**, **seguridad de pistas**, **LiDAR/termal**, and **operación nocturna con drones**.
+
+---
+
+## Scope (Deliverables)
+### A) Home page SEO rewrite (high priority)
+**Acceptance Criteria**
+- [ ] Home has **exactly 1 H1**:
+  - `Control de innivación y seguridad de pistas con drones en los Pirineos`
+- [ ] Add subtitle under H1:
+  - `Parte diario para directores de pistas: cañones, pisado, apertura/cierre y ahorro de agua.`
+- [ ] Add 2 SEO text blocks (each **150–250 words**) on Home:
+  - Block 1: *Qué hacemos* (dron + datos diarios + operación nocturna, sin “show”)
+  - Block 2: *Cómo ayuda* (innivación/cañones, seguridad, pisado, post-temporal)
+- [ ] Add internal links from Home to each service landing (see section B)
+
+---
+
+### B) Create indexable service landings (critical)
+Create the following pages as **separate routes** (not anchor sections). Each page must include:
+- Min **900–1200 words** total content
+- **1 H1 only**
+- H2 structure (see section D)
+- CTA section (“Solicitar demo / Visita técnica”)
+- FAQ (min 5) + **FAQPage JSON-LD** (see section E)
+- Meta Title + Meta Description + OG tags + canonical (see section C)
+
+**Routes**
+- [ ] `/snowwatch-control-innivacion-cannones`
+- [ ] `/pistemap-lidar-espesor-volumen-nieve`
+- [ ] `/safecheck-inspeccion-infraestructura-remontes`
+- [ ] `/operacion-nocturna-dji-dock-dron-autonomo`
+
+**Content Requirements per page**
+- SnowWatch must include keywords naturally:
+  - `innivación`, `cañones de nieve`, `deriva por viento`, `parte diario`, `apertura`, `cierre`
+- PisteMap LiDAR must include:
+  - `mapa de espesores`, `volumetría`, `LiDAR`, `zonas peladas`, `acumulaciones`, `movimiento de nieve`, `pisado`
+- SafeCheck must include:
+  - `remontes`, `infraestructura`, `protecciones`, `barreras`, `post-temporal`, `inspección`
+- Operación nocturna must include:
+  - `operación nocturna`, `dron autónomo`, `DJI Dock`, `vuelos programados`, `sin interferir con esquiadores`
+
+---
+
+### C) Metadata + Canonicals + OpenGraph (all pages)
+**Acceptance Criteria**
+- [ ] Each page has:
+  - [ ] `<title>` ≤ 60 chars
+  - [ ] meta description 140–155 chars
+  - [ ] canonical URL
+  - [ ] OpenGraph title/description/image
+- [ ] Titles/descriptions include intent keywords:
+  - Home includes “Pirineos”
+  - SnowWatch includes “innivación” or “cañones”
+  - PisteMap includes “LiDAR” + “espesor/volumen”
+  - SafeCheck includes “inspección” + “remontes/infraestructura”
+  - Operación nocturna includes “dron autónomo” + “DJI Dock”
+
+**Suggested Meta Titles (copy/paste)**
+- Home Title: `Control de pistas con drones en Pirineos | Innivación y seguridad`
+- SnowWatch Title: `SnowWatch: control de innivación y cañones con dron | Parte diario`
+- PisteMap Title: `PisteMap LiDAR: mapa de espesores y volumetría de nieve por pista`
+- SafeCheck Title: `SafeCheck: inspección de remontes e infraestructura con drones`
+- Dock Title: `Operación nocturna con dron autónomo (DJI Dock) para pistas de esquí`
+
+**Suggested Meta Descriptions (copy/paste)**
+- Home Desc: `Parte diario para directores de pistas: innivación, cañones, pisado y seguridad. Vuelos nocturnos y datos accionables para ahorrar agua.`
+- SnowWatch Desc: `Detecta deriva por viento en cañones, genera alertas y parte diario antes de apertura. Operación nocturna sin interferir con esquiadores.`
+- PisteMap Desc: `Mapa LiDAR de espesores y volúmenes de nieve por pista. Optimiza movimiento de nieve y pisado para alargar temporada y reducir costes.`
+- SafeCheck Desc: `Inspección de remontes, protecciones y zonas críticas tras temporales. Evidencias y checklist para seguridad y reaperturas rápidas.`
+- Dock Desc: `Dron autónomo con DJI Dock para rondas nocturnas y misiones programadas. Datos diarios para operación de pistas y nieve producida.`
+
+---
+
+### D) Heading structure (all landings)
+**Acceptance Criteria**
+- [ ] 1x H1 per page
+- [ ] Use these H2 sections (same order):
+  - H2: `Qué resuelve`
+  - H2: `Cómo funciona (operación diaria/nocturna)`
+  - H2: `Entregables para director de pistas`
+  - H2: `Casos de uso (viento, nevada, final de temporada)`
+  - H2: `Preguntas frecuentes`
+
+---
+
+### E) FAQ schema (JSON-LD) on each landing
+**Acceptance Criteria**
+- [ ] Each landing has min **5 FAQs** visible on page
+- [ ] Add **FAQPage JSON-LD** in `<head>` or end of body
+
+**FAQ Questions (copy/paste set)**
+Use at least 5 per page (adapt answers to page topic):
+- [ ] `¿Qué recibe el director de pistas cada mañana?`
+- [ ] `¿Cómo detectáis deriva por viento en cañones de nieve?`
+- [ ] `¿Se puede operar de noche sin interferir con esquiadores?`
+- [ ] `¿Cómo ayuda a decidir pisado y movimiento de nieve?`
+- [ ] `¿Qué pasa con viento fuerte o una gran nevada?`
+- [ ] `¿Qué precisión aporta el LiDAR para espesores y volúmenes?`
+- [ ] `¿Cómo se integra con el parte de nieve y el centro de control?`
+
+---
+
+### F) Local SEO (Pirineos)
+**Acceptance Criteria**
+- [ ] Mention naturally across Home + at least 2 landings:
+  - `Pirineo aragonés`, `Pirineo catalán`, `Val d’Aran`
+- [ ] Only mention `Andorra` if service is actually offered there
+
+---
+
+### G) Technical SEO checklist
+**Acceptance Criteria**
+- [ ] `sitemap.xml` includes all new routes
+- [ ] `robots.txt` allows indexing (no accidental disallow)
+- [ ] Page performance: image optimization (next/image or equivalent)
+- [ ] Internal linking: Home → all 4 landings + “Casos de uso”
+- [ ] Add `Organization` + `WebSite` JSON-LD (basic structured data)
+- [ ] GA4 installed + conversion event on CTA (“Solicitar demo”)
+
+---
+
+## Notes (must keep tone)
+- Use **jerga de estación** in copy (natural, no stuffing):
+  - `innivación`, `cañones`, `parte de nieve`, `apertura/cierre`, `pisado`, `pisapistas/ratrac`, `zonas peladas`, `acumulaciones`, `riesgo de hielo`, `patrulla`, `balizamiento`, `post-temporal`, `remontes`.
+- Positioning: **no drone show**; flights are **discreet**, mainly **nocturnal**, focused on **operación y seguridad**.
+
+---
+
+## Done Definition
+Ticket is done when:
+- [ ] New routes are live, indexable, and in sitemap
+- [ ] Home H1 + SEO blocks deployed
+- [ ] Each landing has content + FAQ + JSON-LD + meta + canonical
+- [ ] Internal linking is in place and passes a basic SEO audit (Lighthouse / PageSpeed)

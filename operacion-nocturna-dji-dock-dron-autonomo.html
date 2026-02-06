@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación nocturna con dron autónomo (DJI Dock) para pistas de esquí</title>
+    <meta name="description"
+        content="Dron autónomo con DJI Dock para rondas nocturnas y misiones programadas. Datos diarios para operación de pistas y nieve producida.">
+
+    <!-- Canonical & OpenGraph -->
+    <link rel="canonical" href="https://sarrio.ski/operacion-nocturna-dji-dock-dron-autonomo.html" />
+    <meta property="og:title" content="Operación nocturna con dron autónomo (DJI Dock)">
+    <meta property="og:description"
+        content="Vigilancia y monitorización 24/7 sin personal in situ. Tecnología autónoma para la montaña.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sarrio.ski/operacion-nocturna-dji-dock-dron-autonomo.html">
+    <meta property="og:image" content="https://sarrio.ski/dock-automation.jpg">
+    <link rel="icon" type="image/jpeg" href="urogallo favicon.jpeg">
+
+    <!-- Estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sarrio: {
+                            deep: '#0F2440',
+                            main: '#1B3A5C',
+                            signal: '#E8732A',
+                            granite: '#6B7B8D',
+                            ice: '#D1E3F0',
+                            snow: '#F7F8FA',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Instrument Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-sarrio-snow text-sarrio-deep antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="h-12 w-12 text-sarrio-signal">
+                        <svg viewBox="0 0 120 120" fill="none" class="w-full h-full">
+                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor"
+                                stroke-width="6" fill="none" stroke-linecap="round" />
+                            <circle cx="60" cy="32" r="8" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span
+                            class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
+                        <span
+                            class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata
+                            · Pirineos</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#servicios"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium uppercase text-sm tracking-wide">Servicios</a>
+                    <a href="index.html#contacto"
+                        class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition tracking-wide">Solicitar
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="dock-automation.jpg" alt="DJI Dock Autonomous" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-white mt-16">
+            <span
+                class="inline-block px-3 py-1 mb-4 border border-sarrio-signal text-sarrio-signal rounded-full text-xs font-bold uppercase tracking-widest bg-sarrio-deep/80 backdrop-blur">
+                Operativa 24/7
+            </span>
+            <h1 class="font-serif italic text-5xl md:text-7xl mb-6 leading-tight">
+                Operación Nocturna <span class="text-sarrio-signal not-italic font-sans font-bold">Autónoma</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-sarrio-ice font-light max-w-2xl mx-auto">
+                Tu "Vigilante Diario". Drones que viven en la montaña y trabajan mientras duermes.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
+
+        <!-- Qué resuelve -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">¿Qué resuelve?</h2>
+            <div class="prose prose-lg text-sarrio-granite">
+                <p>
+                    Contratar pilotos, desplazarlos a pistas, alojarlos y pagar horas nocturnas diarias es inviable
+                    económicamente. Sin embargo, la montaña no descansa de noche: el viento sopla, la nieve se mueve y
+                    los cañones trabajan. El <strong>DJI Dock 3</strong> elimina el factor humano "in situ". El dron
+                    vive en una caja climatizada en la propia estación, se carga solo y sale a volar automáticamente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Modelo Híbrido</h2>
+                <div class="prose prose-lg text-sarrio-granite">
+                    <p>
+                        Implementamos un esquema operativo eficiente que combina lo mejor de dos mundos:
+                    </p>
+                    <ul class="list-none space-y-4 mt-4">
+                        <li class="pl-4 border-l-2 border-sarrio-signal">
+                            <strong class="text-sarrio-deep">El Vigilante Diario (Autónomo):</strong>
+                            <br>El Dock realiza el trabajo sucio y repetitivo cada noche (monitorización de cañones,
+                            seguridad). Coste marginal por vuelo cercano a cero.
+                        </li>
+                        <li class="pl-4 border-l-2 border-sarrio-main">
+                            <strong class="text-sarrio-deep">El Consultor de Precisión (Manual):</strong>
+                            <br>Para tareas complejas como la volumetría LiDAR mensual, desplazamos pilotos expertos con
+                            equipos pesados (Matrice 350).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-sarrio-ice/20 p-6 rounded-xl border border-sarrio-ice">
+                <ul class="space-y-4 font-mono text-sm text-sarrio-deep">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="zap" class="text-sarrio-signal"></i>
+                        Carga rápida en 25 min
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="thermometer-snowflake" class="text-sarrio-signal"></i>
+                        Opera de -20°C a 50°C
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="wifi" class="text-sarrio-signal"></i>
+                        Control remoto 4G/Cloud
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entregables -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Capacidades del Dock</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Vigilancia Perimetral</h3>
+                    <p class="text-sm text-sarrio-granite">Rondas automáticas para detectar intrusiones o fauna en
+                        pistas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Timelapse Nival</h3>
+                    <p class="text-sm text-sarrio-granite">Registro visual diario de la evolución del manto nivoso en
+                        puntos clave.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Respuesta Rápida</h3>
+                    <p class="text-sm text-sarrio-granite">Despegue en &lt;1 min para verificar incidencias reportadas
+                        por pisters.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de uso -->
+        <section class="bg-sarrio-deep text-white p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 font-serif italic">Ventajas Estratégicas</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-sarrio-ice">
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Reducción drástica de OPEX (sin horas extra nocturnas).
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Datos frescos cada mañana antes de la apertura.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Menor riesgo laboral al evitar desplazamientos nocturnos.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Apoyo térmico inmediato en Búsqueda y Rescate.
+                </li>
+            </ul>
+        </section>
+
+        <!-- FAQ JSON-LD -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-8 font-serif">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Resiste el frío y la nieve el Dock dejándolo fuera?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Sí. El DJI Dock 3 tiene certificación IP55 y cuenta con sistemas de calefacción y aire
+                        acondicionado internos. Mantiene las baterías del dron a temperatura óptima incluso si fuera
+                        hace -20°C.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué pasa si se va la luz en la estación?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        El Dock cuenta con una batería interna de respaldo que le permite operar durante 5 horas sin
+                        corriente externa, garantizando que el dron pueda aterrizar y el sistema siga online.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Necesito tener un piloto en la estación?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        No para la operación diaria. El sistema se controla remotamente a través de la nube (FlightHub
+                        2) desde nuestra central o desde cualquier ordenador con conexión a internet.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Es legal volar de noche y sin piloto presente?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Sí, bajo la categoría específica y con los permisos adecuados (SORA) que nosotros gestionamos
+                        para la estación. Al ser un entorno controlado y privado (concesión), es el escenario ideal para
+                        estas operaciones.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué mantenimiento requiere?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        El mantenimiento es mínimo: limpieza de sensores, revisión de hélices y limpieza de la cubierta
+                        del dock. Nosotros incluimos estas revisiones en el servicio periódico.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center pt-8">
+            <a href="index.html#contacto"
+                class="inline-block bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40">
+                Evaluar ubicación del Dock
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-sarrio-deep text-sarrio-granite py-12 text-sm border-t border-white/10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between">
+            <div class="font-mono uppercase tracking-widest">Sarrio Aerodata &copy; 2024</div>
+            <a href="index.html" class="hover:text-white transition">Volver al Inicio</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Resiste el frío y la nieve el Dock dejándolo fuera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, tiene certificación IP55 y climatización interna operativa de -20°C a 50°C."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Qué pasa si se va la luz en la estación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cuenta con batería de respaldo para 5 horas de autonomía."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Necesito tener un piloto en la estación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, se opera remotamente desde la nube."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Es legal volar de noche y sin piloto presente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, gestionamos los permisos SORA necesarios para operación BVLOS nocturna."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Qué mantenimiento requiere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mantenimiento mínimo de limpieza y revisión de hélices, incluido en nuestro servicio."
+        }
+      }]
+    }
+    </script>
+</body>
+
+</html>

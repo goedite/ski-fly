@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeCheck: inspección de remontes e infraestructura con drones</title>
+    <meta name="description"
+        content="Inspección de remontes, protecciones y zonas críticas tras temporales. Evidencias y checklist para seguridad y reaperturas rápidas.">
+
+    <!-- Canonical & OpenGraph -->
+    <link rel="canonical" href="https://sarrio.ski/safecheck-inspeccion-infraestructura-remontes.html" />
+    <meta property="og:title" content="SafeCheck: inspección de remontes e infraestructura">
+    <meta property="og:description"
+        content="Seguridad ante todo. Inspección visual rápida tras temporales para proteger a tu equipo.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sarrio.ski/safecheck-inspeccion-infraestructura-remontes.html">
+    <meta property="og:image" content="https://sarrio.ski/safecheck.jpg">
+    <link rel="icon" type="image/jpeg" href="urogallo favicon.jpeg">
+
+    <!-- Estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sarrio: {
+                            deep: '#0F2440',
+                            main: '#1B3A5C',
+                            signal: '#E8732A',
+                            granite: '#6B7B8D',
+                            ice: '#D1E3F0',
+                            snow: '#F7F8FA',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Instrument Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-sarrio-snow text-sarrio-deep antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sarrio-ice shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <div class="h-12 w-12 text-sarrio-signal">
+                        <svg viewBox="0 0 120 120" fill="none" class="w-full h-full">
+                            <path d="M38 72 C38 72 42 38 60 32 C78 38 82 72 82 72" stroke="currentColor"
+                                stroke-width="6" fill="none" stroke-linecap="round" />
+                            <circle cx="60" cy="32" r="8" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span
+                            class="font-bold text-2xl tracking-[0.2em] text-sarrio-deep block leading-none">SARRIO</span>
+                        <span
+                            class="font-mono text-[0.6rem] tracking-[0.3em] text-sarrio-granite block mt-1 uppercase">Aerodata
+                            · Pirineos</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#servicios"
+                        class="text-sarrio-granite hover:text-sarrio-main font-medium uppercase text-sm tracking-wide">Servicios</a>
+                    <a href="index.html#contacto"
+                        class="bg-sarrio-signal text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition tracking-wide">Solicitar
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="safecheck.jpg" alt="Drone Inspection" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-white mt-16">
+            <span
+                class="inline-block px-3 py-1 mb-4 border border-sarrio-signal text-sarrio-signal rounded-full text-xs font-bold uppercase tracking-widest bg-sarrio-deep/80 backdrop-blur">
+                Inspección Crítica
+            </span>
+            <h1 class="font-serif italic text-5xl md:text-7xl mb-6 leading-tight">
+                SafeCheck: Seguridad de <span
+                    class="text-sarrio-signal not-italic font-sans font-bold">Infraestructuras</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-sarrio-ice font-light max-w-2xl mx-auto">
+                Auditoría visual y técnica tras temporales. Protege a tu equipo antes de abrir.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
+
+        <!-- Qué resuelve -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">¿Qué resuelve?</h2>
+            <div class="prose prose-lg text-sarrio-granite">
+                <p>
+                    Tras un <strong>temporal</strong> o episodio de viento fuerte, revisar toda la línea de remontes a
+                    pie o en moto de nieve es un proceso lento y, a menudo, peligroso para el personal de montaña
+                    (pisteros y técnicos). SafeCheck permite verificar el estado de pilonas, balancines y cables desde
+                    el aire antes de que ningún operario acceda a la línea, garantizando su seguridad y acelerando la
+                    decisión de apertura.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Cómo funciona</h2>
+                <div class="prose prose-lg text-sarrio-granite">
+                    <p>
+                        Desplegamos drones equipados con cámaras de <strong>zoom de alta resolución</strong> para
+                        inspeccionar puntos críticos definidos previamente en la base de datos de la estación (pilonas,
+                        protecciones, paravientos). El sistema captura imágenes en alta definición que son analizadas
+                        por el equipo técnico en tiempo real o diferido para detectar anomalías como cables salidos,
+                        hielo en balancines o redes caídas.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-sarrio-ice/20 p-6 rounded-xl border border-sarrio-ice">
+                <ul class="space-y-4 font-mono text-sm text-sarrio-deep">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="zoom-in" class="text-sarrio-signal"></i>
+                        Zoom Óptico x20
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="alert-triangle" class="text-sarrio-signal"></i>
+                        Detección de Hielo/Roturas
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="shield-check" class="text-sarrio-signal"></i>
+                        Vuelo seguro a distancia sin riesgo
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entregables -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-6 font-serif">Entregables de Seguridad</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Informe de Incidencias</h3>
+                    <p class="text-sm text-sarrio-granite">Reporte fotográfico geolocalizado de daños (roturas,
+                        descalces, hielo).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Checklist Visual</h3>
+                    <p class="text-sm text-sarrio-granite">Verificación rápida "Go/No-Go" para el jefe de explotación.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-sarrio-ice">
+                    <h3 class="font-bold text-lg mb-2">Auditoría de Protecciones</h3>
+                    <p class="text-sm text-sarrio-granite">Estado de redes, colchones y señalización antes de abrir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Casos de uso -->
+        <section class="bg-sarrio-deep text-white p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 font-serif italic">Cuándo activar SafeCheck</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-sarrio-ice">
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Inspección post-temporal (viento > 80km/h).
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Descalce de cables o bloqueos por hielo.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Revisión de mantenimiento preventivo en verano.
+                </li>
+                <li class="flex gap-2">
+                    <span class="text-sarrio-signal">►</span> Homologación de pistas antes de competiciones.
+                </li>
+            </ul>
+        </section>
+
+        <!-- FAQ JSON-LD -->
+        <section>
+            <h2 class="text-3xl font-bold text-sarrio-deep mb-8 font-serif">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué elementos se pueden inspeccionar estructuralmente?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Inspeccionamos pilonas, balancines, mordazas, cables, estaciones de retorno y motrices, así como
+                        redes de protección, paravientos y sistemas de Gasex.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Sustituye esta inspección a la revisión reglamentaria?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        No. SafeCheck es una herramienta de apoyo operativo diario y post-evento. No sustituye a las
+                        inspecciones reglamentarias anuales o magnetográficas, sino que agiliza la toma de decisiones
+                        diarias de apertura y seguridad laboral.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Qué pasa si hace mucho viento para volar?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Nuestros equipos Matrice soportan vientos de hasta 12-15 m/s. Si las condiciones son extremas
+                        (huracanadas), el vuelo se pospone por seguridad, pero podemos operar en ventanas de calma mucho
+                        antes de que sea seguro enviar personal.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Cuánto tarda una revisión de un telesilla?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Depende de la longitud, pero una inspección visual rápida de línea de un telesilla desembragable
+                        estándar puede realizarse en 10-15 minutos de vuelo.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-sarrio-ice overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-6 cursor-pointer font-bold text-sarrio-deep hover:bg-sarrio-snow transition">
+                        ¿Se entregan las imágenes al momento?
+                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-sarrio-granite leading-relaxed">
+                        Sí, las imágenes pueden transmitirse en tiempo real al centro de control si hay cobertura 4G/5G,
+                        o descargarse inmediatamente al aterrizar para su análisis en pantalla grande.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center pt-8">
+            <a href="index.html#contacto"
+                class="inline-block bg-sarrio-signal text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-900/40">
+                Solicitar Demostración de Inspección
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-sarrio-deep text-sarrio-granite py-12 text-sm border-t border-white/10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between">
+            <div class="font-mono uppercase tracking-widest">Sarrio Aerodata &copy; 2024</div>
+            <a href="index.html" class="hover:text-white transition">Volver al Inicio</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Qué elementos se pueden inspeccionar estructuralmente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inspeccionamos pilonas, balancines, mordazas, cables, estaciones de retorno y motrices, así como redes de protección, paravientos y sistemas de Gasex."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Sustituye esta inspección a la revisión reglamentaria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SafeCheck es una herramienta de apoyo operativo diario y post-evento para seguridad visual rápida."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Qué pasa si hace mucho viento para volar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestros equipos soportan hasta 15 m/s. Si es extremo, esperamos a una ventana segura, generalmente antes de que sea seguro para el personal."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cuánto tarda una revisión de un telesilla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una inspección visual rápida de línea suele tomar entre 10 y 15 minutos."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Se entregan las imágenes al momento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, transmisión en tiempo real (con cobertura) o descarga inmediata tras el aterrizaje."
+        }
+      }]
+    }
+    </script>
+</body>
+
+</html>

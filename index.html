@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARRIO | Aerodata Pirineos</title>
+    <title>Control de pistas con drones en Pirineos | Innivación y seguridad - Sarrio</title>
     <meta name="description"
-        content="Inteligencia aeroespacial de montaña. Monitorización de innivación, cartografía e inspección de infraestructuras en el Pirineo.">
+        content="Parte diario para directores de pistas: innivación, cañones, pisado y seguridad. Vuelos nocturnos y datos accionables para ahorrar agua del Pirineo.">
+
+    <!-- Canonical & OpenGraph -->
+    <link rel="canonical" href="https://sarrio.ski/" />
+    <meta property="og:title" content="Control de pistas con drones en Pirineos | Innivación y seguridad - Sarrio">
+    <meta property="og:description"
+        content="Parte diario para directores de pistas: innivación, cañones, pisado y seguridad. Vuelos nocturnos y datos accionables para ahorrar agua.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sarrio.ski/">
+    <meta property="og:image" content="https://sarrio.ski/hero-landscape.jpg">
+    <link rel="icon" type="image/jpeg" href="urogallo favicon.jpeg">
 
     <!-- 1. Carga de estilos (Tailwind CSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -122,13 +132,13 @@
                 <span class="text-xs font-mono uppercase tracking-widest text-sarrio-ice">Inteligencia de Nieve</span>
             </div>
 
-            <h1 class="font-serif italic text-6xl md:text-8xl mb-6 leading-tight">
-                Cada copo <span class="text-sarrio-signal not-italic font-sans font-bold">cuenta</span>
+            <h1 class="font-serif italic text-4xl md:text-6xl mb-6 leading-tight">
+                Control de innivación y <span class="text-sarrio-signal not-italic font-sans font-bold">seguridad</span>
+                de pistas con drones en los Pirineos
             </h1>
 
-            <p class="text-xl md:text-2xl text-sarrio-ice mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                La montaña, vista desde donde importa. Ahorro de agua, seguridad operativa y datos accionables para el
-                Pirineo.
+            <p class="text-xl md:text-2xl text-sarrio-ice mb-12 max-w-4xl mx-auto font-light leading-relaxed">
+                Parte diario para directores de pistas: cañones, pisado, apertura/cierre y ahorro de agua.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
@@ -143,6 +153,52 @@
             </div>
         </div>
     </header>
+
+    <!-- SEO CONTENT BLOCKS -->
+    <section class="py-16 bg-white border-b border-sarrio-snow">
+        <div
+            class="max-w-4xl mx-auto px-4 prose prose-lg prose-headings:font-serif prose-headings:text-sarrio-deep text-sarrio-granite">
+
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Operativa Aérea Autónoma en Pirineos</h2>
+                <p>
+                    Transformamos la gestión de estaciones de esquí en los <strong>Pirineos</strong> mediante
+                    inteligencia aérea autónoma. No realizamos espectáculos de luces; ejecutamos misiones críticas de
+                    ingeniería y vigilancia. Nuestro sistema se basa en la implementación de <strong>DJI Docks</strong>
+                    operativos 24/7 y drones Matrice con termografía y LiDAR, diseñados para soportar las duras
+                    condiciones invernales de alta montaña.
+                </p>
+                <p>
+                    Cada noche, mientras la estación descansa, nuestros drones patrullan de forma autónoma. Recopilamos
+                    datos precisos sobre el estado de la <strong>innivación</strong>, detectamos fugas térmicas y
+                    monitorizamos la infraestructura clave. Al amanecer, el director de pistas recibe un "parte de
+                    guerra" digital: un informe detallado y georreferenciado que permite tomar decisiones informadas
+                    antes de la apertura al público. Eliminamos la incertidumbre de la ecuación, proporcionando ojos en
+                    el cielo cuando más se necesitan.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Optimización de Innivación y Seguridad</h2>
+                <p>
+                    Optimizamos cada metro cúbico de nieve producida y garantizamos la seguridad operativa. Nuestro
+                    sistema <strong>SnowWatch</strong> detecta en tiempo real la deriva por viento en los
+                    <strong>cañones de nieve</strong>, permitiendo correcciones inmediatas que ahorran miles de litros
+                    de agua y energía. Con la cartografía LiDAR de <strong>PisteMap</strong>, generamos mapas de espesor
+                    de nieve con precisión centimétrica, guiando a las máquinas pisapistas (ratracs) para mover la nieve
+                    exactamente donde hace falta.
+                </p>
+                <p>
+                    Tras un temporal, <strong>SafeCheck</strong> inspecciona remontes, pilonas y redes de protección en
+                    minutos, identificando zonas peladas o acumulaciones peligrosas antes de enviar a los pisters. Esta
+                    tecnología no solo reduce los costes operativos diarios, sino que eleva los estándares de seguridad
+                    y sostenibilidad de la estación, asegurando pistas perfectas con el menor impacto ambiental posible
+                    en el <strong>Val d'Aran</strong> y todo el Pirineo.
+                </p>
+            </div>
+
+        </div>
+    </section>
 
     <!-- SECCIÓN 1: POSICIONAMIENTO -->
     <section id="proposito" class="py-24 bg-white relative overflow-hidden">
@@ -238,8 +294,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div
-                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                <a href="snowwatch-control-innivacion-cannones.html"
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block">
                     <div
                         class="w-12 h-12 bg-sarrio-deep text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="snowflake" class="w-6 h-6"></i>
@@ -253,29 +309,32 @@
                     <div
                         class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
                     </div>
-                </div>
+                </a>
 
                 <!-- Card 2 -->
-                <div
-                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                <a href="pistemap-lidar-espesor-volumen-nieve.html"
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block">
                     <div
                         class="w-12 h-12 bg-sarrio-main text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="map" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-sarrio-deep">PisteMap</h3>
-                    <p class="text-sm text-sarrio-granite mb-4">Cartografía y modelos digitales de terreno (DTM).</p>
-                    <div class="h-40 rounded-lg bg-sarrio-snow mb-4 overflow-hidden border border-sarrio-ice">
-                        <img src="pistemap.jpg" alt="PisteMap"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div
-                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
-                    </div>
+                        <div
+                            class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                        </div>
+                </a>
+                <h3 class="text-xl font-bold mb-2 text-sarrio-deep">PisteMap</h3>
+                <p class="text-sm text-sarrio-granite mb-4">Cartografía y modelos digitales de terreno (DTM).</p>
+                <div class="h-40 rounded-lg bg-sarrio-snow mb-4 overflow-hidden border border-sarrio-ice">
+                    <img src="pistemap.jpg" alt="PisteMap"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
+                <div
+                    class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
+                </div>
+                </a>
 
                 <!-- Card 3 -->
-                <div
-                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                <a href="safecheck-inspeccion-infraestructura-remontes.html"
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block">
                     <div
                         class="w-12 h-12 bg-sarrio-granite text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-slate-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="activity" class="w-6 h-6"></i>
@@ -289,11 +348,11 @@
                     <div
                         class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
                     </div>
-                </div>
+                </a>
 
                 <!-- Card 4 -->
-                <div
-                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group">
+                <a href="operacion-nocturna-dji-dock-dron-autonomo.html"
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block">
                     <div
                         class="w-12 h-12 bg-emerald-700 text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-green-900/20 group-hover:bg-sarrio-signal transition-colors">
                         <i data-lucide="mountain" class="w-6 h-6"></i>
@@ -304,11 +363,10 @@
                         <img src="dock-automation.jpg" alt="Sarrio Dock"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div
-                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
-                    </div>
-                </div>
+                </a>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -465,6 +523,24 @@
     <!-- Script inicializador de iconos -->
     <script>
         lucide.createIcons();
+    </script>
+
+    <!-- JSON-LD Structured Data (Organization + WebSite) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sarrio Aerodata",
+      "url": "https://sarrio.ski/",
+      "logo": "https://sarrio.ski/logo.png",
+      "description": "Inteligencia aeroespacial de montaña. Innivación, seguridad y drones en Pirineos.",
+      "areaServed": "Pyrenees",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hola@sarrio.tech",
+        "contactType": "sales"
+      }
+    }
     </script>
 </body>
 
