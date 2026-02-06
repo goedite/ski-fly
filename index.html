@@ -313,23 +313,22 @@
 
                 <!-- Card 2 -->
                 <a href="pistemap-lidar-espesor-volumen-nieve.html"
-                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block">
+                    class="bg-white p-6 rounded-xl border border-sarrio-ice hover:border-sarrio-signal hover:shadow-xl transition-all group block relative overflow-hidden">
                     <div
-                        class="w-12 h-12 bg-sarrio-main text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors">
+                        class="w-12 h-12 bg-sarrio-main text-white rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:bg-sarrio-signal transition-colors relative z-10">
                         <i data-lucide="map" class="w-6 h-6"></i>
-                        <div
-                            class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
-                        </div>
-                </a>
-                <h3 class="text-xl font-bold mb-2 text-sarrio-deep">PisteMap</h3>
-                <p class="text-sm text-sarrio-granite mb-4">Cartografía y modelos digitales de terreno (DTM).</p>
-                <div class="h-40 rounded-lg bg-sarrio-snow mb-4 overflow-hidden border border-sarrio-ice">
-                    <img src="pistemap.jpg" alt="PisteMap"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div
-                    class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500">
-                </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-sarrio-deep relative z-10">PisteMap</h3>
+                    <p class="text-sm text-sarrio-granite mb-4 relative z-10">Cartografía y modelos digitales de terreno
+                        (DTM).</p>
+                    <div
+                        class="h-40 rounded-lg bg-sarrio-snow mb-4 overflow-hidden border border-sarrio-ice relative z-10">
+                        <img src="pistemap.jpg" alt="PisteMap"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="h-0.5 w-8 bg-sarrio-ice group-hover:w-full group-hover:bg-sarrio-signal transition-all duration-500 relative z-10">
+                    </div>
                 </a>
 
                 <!-- Card 3 -->
@@ -404,7 +403,7 @@
                 </div>
 
                 <!-- Tech Item 2: DJI Matrice 400 + LiDAR -->
-                <div class="space-y-6 md:mt-12">
+                <div class="space-y-6">
                     <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-sarrio-ice">
                         <img src="tech-matrice-lidar.png" alt="DJI Matrice 400 Lidar"
                             class="w-full h-full object-cover">
